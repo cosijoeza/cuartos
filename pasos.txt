@@ -1,0 +1,31 @@
+Para comenzar a desarrollar la página hicimos un analisis de contexto
+se investigaron los cuartos disponibles, costos,depositos,ubicacion,
+nombre del arrendatario, como contactarlo....
+
+Comenzamos desarrollando la página que se mostrará en el inicio del buscador.
+Se hicieron propuestas de formularios para la optencion de datos por parte
+del usuario. Se optó por utilizar un formulario que no tuviera tantos campos de 
+entrada y  que llegaran a confundir al usuario.
+
+Con la información recolectada de los cuartos, se realizó una base de datos
+utilizando el gestor MySQL. Para poder administrar el gestor utilizamos
+la herramienta XAMPP el cual es un interprete para lenguaje PH y MySQL, incluye
+una interfaz gráfica de nombre PHPMYADMIN que nos permite gestionar las bases 
+de datos. Se creó la base de datos y se introdujo toda la información.
+
+Se utilizó el lenguaje de programación PHP para realizar la conexión con la base 
+de datos y poder hacer las consultas.
+
+Para hacer la busqueda de los cuartos, tomamos la información que nos proporciona el usuario
+y realizamos la consulta a la base de datos.
+Con los valores obtenidos se van desplegando los cuartos que cumplen
+con las restricciones del usuario
+
+Cuando no encuentra resultados de acuerdo a las condiciones
+del usuario se le muestran todos los cuartos que hay disponibles
+
+Se agregó una página para mostrar la información de los
+creadores.
+
+Mostramos un formulario para que el usuario se comuniuque directamente con nosotros
+donde pedimos su nombre, correo y el mensaje que quiera proporcionarmos

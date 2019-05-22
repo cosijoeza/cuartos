@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acatlima</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--W3School-->
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <!--Archivos de bootstrap-->
+  <link rel="stylesheet" href="css/material.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="icon" href="img/ma.ico">
+  <script src="js/jquery-slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/material.min.js"></script>
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+  </style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-large">
+  <a href="index.html" class="w3-bar-item w3-button w3-red w3-mobile"><img src="img/LOGOMAPLACE.png" id="logo"></a>
+  <a href="cuartos.php" class="w3-bar-item w3-button w3-mobile">Cuartos</a>
+  <a href="nosotros.html" class="w3-bar-item w3-button w3-mobile">Nosotros</a>
+  <a href="contacto.html" class="w3-bar-item w3-button w3-mobile">Contacto</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile"></a>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content parallax" id = "hdr" style="max-width:1500px;">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-4">
+        <div class="w3-container-1 w3-white ">
+          <form id="form1" action = "busqueda.php"  method="post">
+            <div class="w3-container w3-red">
+              <h2><i class="fa fa-bed w3-margin-right"></i>¡Encuentra tu habitación!</h2>
+            </div>
+            <!--Precio maximo-->
+            <div class="container">
+              <div class="form-group">
+                <label class="letra1"><i class="fas fa-dollar-sign"></i> Precio maximo</label>
+                <input type="number" id="replyNumber" data-bind="value:replyNumber" value = "1000" class="form-control" name="precio">
+              </div>
+              <!--Tipo de cuarto-->
+              <div class="form-group form-check row">
+                  <div class = "col-4">
+                    <i class="fa fa-bed" aria-hidden="true"></i>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="op-3">
+                        <input type="radio" id="op-3" class="mdl-radio__button" name="room" value="3" checked>
+                        <span class="mdl-radio__label">Cuarto</span>
+                    </label>
+                  </div>
+                  <div class = "col-4">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="op-2">
+                        <input type="radio" id="op-2" class="mdl-radio__button" name="room" value="2">
+                        <span class="mdl-radio__label">Casa</span>
+                    </label>
+                  </div>
+                  <div class = "col-4">
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="op-1">
+                        <input type="radio" id="op-1" class="mdl-radio__button" name="room" value="1">
+                        <span class="mdl-radio__label">Depa</span>
+                      </label>
+                  </div>
+              </div>
+              <!--Internet-->
+              <div class="form-group form-check row">
+                  <div class = "col-4"><label class = "letra1"><i class="fa fa-wifi"></i>  Internet</label></div>
+                  <div class = "col-4">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="internet" value="2" checked>
+                        <span class="mdl-radio__label">Si</span>
+                    </label>
+                  </div>
+                  <div class = "col-4">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="option-2" class="mdl-radio__button" name="internet" value="1">
+                        <span class="mdl-radio__label">No</span>
+                    </label>
+                  </div>
+              </div>
+              <!--Baño propio-->
+            <div class="form-group form-check row">
+                <div class = "col-4"><label class = "letra1"><i class="fa fa-bath"></i>  Baño propio</label></div>
+                <div class = "col-4">
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="bath_option1">
+                    <input type="radio" id="bath_option1" class="mdl-radio__button" name="bathroom" value="1">
+                    <span class="mdl-radio__label">Si</span>
+                  </label>
+                </div>
+                <div class = "col-4">
+                  <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="bath_option2">
+                      <input type="radio" id="bath_option2" class="mdl-radio__button" name="bathroom" value="0" checked>
+                      <span class="mdl-radio__label">No</span>
+                  </label>
+                </div>
+            </div>
+            <!--BOTON-->
+            <button class='w3-button w3-block w3-black w3-margin-bottom'>Buscar</button>
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="col-7"></div> 
+    </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1532px;">
+
+  <div class="w3-row-padding w3-padding-16">
+    <div class='w3-third w3-margin-bottom'>
+        <img src='img/3/2.JPG' alt='Norway' style="width:100%;">
+        <div class='w3-container w3-white'>
+            <h1>$3000</h1>
+            <h3 class='w3-opacity'>Deposito: $3000</h3>
+            <p><b>Domicilio en Acatlima :</b> Calle Aldama #7</p>
+            <p><b>Servicios: </b>Básicos,Internet</p>
+            <p><i class='fa fa-map-marker'></i><b> Distancia: </b>20 metros</p>
+            <p><i class='fa fa-user'></i><b> Arrendatario: </b>María del Carmen Bautista Sánchez</p>
+            <p><i class='fa fa-phone'></i><b> Contacto: </b>9532469527</p>
+            <br/>
+            <p class='w3-large'><i class='fa fa-bath'></i><i class='fa fa-wifi'></i> </p>
+            <button class='w3-button w3-block w3-black w3-margin-bottom'>Seleccionar</button>
+          </div>
+    </div>
+    <div class='w3-third w3-margin-bottom'>
+        <img src='img/16/1.JPG' alt='Norway' style="width:100%;">
+        <div class='w3-container w3-white'>
+            <h1>$950</h1>
+            <h3 class='w3-opacity'>Deposito: $950</h3>
+            <p><b>Domicilio en Acatlima :</b>Flores Magón #6</p>
+            <p><b>Servicios: </b>Básicos,Internet</p>
+            <p><i class='fa fa-map-marker'></i><b> Distancia: </b>46 metros</p>
+            <p><i class='fa fa-user'></i><b> Arrendatario: </b>Aracely Martínez Córdoba</p>
+            <p><i class='fa fa-phone'></i><b> Contacto: </b>9538412257</p>
+            <br/>
+            <p class='w3-large'><i class='fa fa-bath'></i><i class='fa fa-wifi'></i> </p>
+            <button class='w3-button w3-block w3-black w3-margin-bottom'>Seleccionar</button>
+          </div>
+      </div>
+  <div class='w3-third w3-margin-bottom'>
+        <img src='img/22/1.JPG' alt='Norway' style="width:100%;">
+        <div class='w3-container w3-white'>
+            <h1>$2100</h1>
+            <h3 class='w3-opacity'>Deposito: $2100</h3>
+            <p><b>Domicilio en Acatlima :</b>6Tierra y Libertad #7</p>
+            <p><b>Servicios: </b>Básicos,Internet</p>
+            <p><i class='fa fa-map-marker'></i><b> Distancia: </b>61 metros</p>
+            <p><i class='fa fa-user'></i><b> Arrendatario: </b>Agustín Aragón Cuevas</p>
+            <p><i class='fa fa-phone'></i><b> Contacto: </b>9530274448</p>
+            <br/>
+            <p class='w3-large'><i class='fa fa-bath'></i><i class='fa fa-wifi'></i> </p>
+            <button class='w3-button w3-block w3-black w3-margin-bottom'>Seleccionar</button>
+          </div>
+      </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+</body>
+</html>
